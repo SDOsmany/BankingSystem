@@ -41,4 +41,13 @@ public class Customer {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String getCustomerInfomation()
+    {
+        String result = "";
+        result += String.format("%-30s", this.name);
+        result += String.format("%10d", this.lastname);
+        result += String.format("%10d", Integer.toString(getAge()));
+        return result;
+    }
 }
