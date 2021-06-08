@@ -4,10 +4,11 @@ public class Customer {
     private String name, lastname, accountNumber;
     private int age;
 
-    public Customer(String name, String lastname, int age){
+    public Customer(String name, String lastname,String accountNumber, int age){
         this.name = name;
         this.lastname = name;
         this.age = age;
+        this.accountNumber = accountNumber;
     }
 
     public void setName(String name){

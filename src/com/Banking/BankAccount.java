@@ -29,4 +29,7 @@ public class BankAccount {
                     "your new balance is $"+getBalance());
         }
     }
+    public Customer getCustomer(){
+        return this.customer;
+    }
 }

@@ -3,16 +3,16 @@ package com.Banking;
 import java.util.ArrayList;
 
 public class Database {
-    private ArrayList<Customer> list;
-    private Customer customer;
+    private ArrayList<BankAccount> list;
+    private BankAccount bankAccount;
 
     private int index;
     private boolean found;
 
     //Database Constructor
     public Database(){
-        list = new ArrayList<Customer>();
-        customer = null;
+        list = new ArrayList<BankAccount>();
+        bankAccount = null;
         index = 0;
         found = false;
     }
@@ -24,9 +24,9 @@ public class Database {
         int i = 0;
         while (!found && i< list.size()){
 
-            Customer c = list.get(i);
-            if(c.getAccountNumber().equalsIgnoreCase(account)) {
-                customer = c;
+            BankAccount c = list.get(i);
+            if(c.getCustomer().getAccountNumber().equalsIgnoreCase(account)) {
+                bankAccount = c;
                 found = true;
                 index = i;
             }else{
@@ -35,8 +35,8 @@ public class Database {
         }
     }
 
-    public void add(Customer newCustomer){
-        list.add(newCustomer);
+    public void add(BankAccount newBankAccount){
+        list.add(newBankAccount);
     }
 
     public int getIndex(){
@@ -51,7 +51,7 @@ public class Database {
         return list.size();
     }
 
-    public Customer delete(int i){
+    public BankAccount delete(int i){
         return  list.remove(i);
     }
 
@@ -60,7 +60,11 @@ public class Database {
         return list.isEmpty();
     }
 
-    public ArrayList<Customer> getList()
+    public BankAccount getBankAccount(){
+        return this.bankAccount;
+    }
+
+    public ArrayList<BankAccount> getList()
     {
         return list;
     }
