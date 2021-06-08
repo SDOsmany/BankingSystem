@@ -7,7 +7,7 @@ public class Display {
     {
         String result = String.format("%30s", bankAccount.getCustomer().getName());
         result += String.format("%30s", bankAccount.getCustomer().getLastname());
-        result += String.format("%30s", Integer.toString(bankAccount.getCustomer().getAge()));
+        result += String.format("%30s", bankAccount.getCustomer().getAge());
         return result;
     }
 
@@ -34,7 +34,7 @@ public class Display {
 
         String inventoryResult = "";
         ArrayList<BankAccount> accounts = bankDB.getList();
-        inventoryResult += String.format("%-30s \t%s %10s %15s \n",
+        inventoryResult += String.format("%-30s \t%s %10s  \n",
                 "Name", "Last Name", "Age");
         for (int i = 0; i < bankDB.size(); i++)
         {

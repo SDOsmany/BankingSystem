@@ -1,10 +1,9 @@
 package com.Banking;
 
 public class Customer {
-    private String name, lastname, accountNumber;
-    private int age;
+    private String name, lastname, accountNumber, age;
 
-    public Customer(String name, String lastname,String accountNumber, int age){
+    public Customer(String name, String lastname,String accountNumber, String age){
         this.name = name;
         this.lastname = name;
         this.age = age;
@@ -27,7 +26,7 @@ public class Customer {
         return accountNumber;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
@@ -39,16 +38,16 @@ public class Customer {
         this.accountNumber = accountNumber;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
     public String getCustomerInfomation()
     {
         String result = "";
-        result += String.format("%-30s", this.name);
-        result += String.format("%10d", this.lastname);
-        result += String.format("%10d", Integer.toString(getAge()));
+        result += String.format("\t", this.name);
+        result += String.format("\t", this.lastname);
+        result += String.format("\t", this.age);
         return result;
     }
 }
